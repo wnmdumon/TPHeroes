@@ -9,6 +9,11 @@ const PORT = 3030;
 
 // routing
 
+
+
+    
+
+
 app.get('/', (req, res) => {
     let home = path.join(__dirname, '/views/index.html');
     res.sendFile(home);
@@ -41,6 +46,13 @@ app.get('/hopper', (req, res) => {
     res.sendFile(hopper)
 })
 
+app.get('/index', (req, res) => {
+    let home = path.join(__dirname, '/views/index.html');
+    res.sendFile(home);
+
+    
+})
+
 app.get('/lovelace', (req, res) => {
     let lovelace = path.join(__dirname, '/views/lovelace.html');
     res.sendFile(lovelace)
@@ -51,9 +63,3 @@ app.get('/turing', (req, res) => {
     res.sendFile(turing);
 
 })
-
-
-
-app.listen(PORT, () => console.log(`Servidor levantado en el puerto ${PORT} http://localhost:${PORT}`))
-
-
